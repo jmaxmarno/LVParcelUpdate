@@ -15,15 +15,14 @@ if __name__ == '__main__':
     main()
 
 import os
-import requests
-import zipfile
-import datetime
-import sys
 import shutil
-
+import sys
+import zipfile
+import requests
+#import datetime  # Not needed for current config
 # File urls
 # Boulder County Data in shapefile format
-BC_Parcels = "http://gis.bouldercounty.opendata.arcgis.com/datasets/89ae49d4ddf246388ee5f5e952aa84db_0test.zip"
+BC_Parcels = "http://gis.bouldercounty.opendata.arcgis.com/datasets/89ae49d4ddf246388ee5f5e952aa84db_0.zip"
 Municpalities = "http://gis.bouldercounty.opendata.arcgis.com/datasets/9597d3916aba47e887ca563d5ac15938_0.zip"
 CountyBoundary = "http://gis.bouldercounty.opendata.arcgis.com/datasets/964b8f3b3dbe401bb28d49ac93d29dc4_0.zip"
 # Assessor's Property Data
@@ -58,7 +57,7 @@ os.chdir(file_path+"\\BC_DATA")
 def bcdnld(urlstr, namestr, fileextstr):
     r = requests.get(urlstr)
     if r.status_code == 200:
-        print(namestr, 'URL Valid:')
+        print(namestr, 'URL Valid- ')
         print("Downloading with requests: ", urlstr)
         fname = namestr + fileextstr
         # to include today's date in filename substitute line below for line above
