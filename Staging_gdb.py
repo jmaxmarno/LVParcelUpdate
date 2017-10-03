@@ -27,7 +27,7 @@ arcpy.env.overwriteOutput = True
 if arcpy.Exists(newgdb):
     arcpy.Delete_management(newgdb)
 arcpy.CreateFileGDB_management(out_folder_path=file_path, out_name="BoulderCountyData.gdb")
-coordsys = arcpy.SpatialReference(2772)
+coordsys = arcpy.SpatialReference(2876)
 
 arcpy.env.scratchWorkspace = newgdb
 arcpy.env.workspace = newgdb
