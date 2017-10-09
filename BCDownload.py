@@ -36,7 +36,7 @@ Tax_Areas = "http://assessor.boco.solutions/ASR_PublicDataFiles/Tax_Areas.csv"
 Tax_Authorities = "http://assessor.boco.solutions/ASR_PublicDataFiles/Tax_Authorities.csv"
 Values = "http://assessor.boco.solutions/ASR_PublicDataFiles/Values.csv"
 
-file_path = os.path.dirname(os.path.realpath(__file__))
+file_path = r'C:\Users\Max\PycharmProjects\LVParcelUpdate'
 def create_folder(path):
     try:
         if os.path.isdir(path):
